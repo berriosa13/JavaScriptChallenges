@@ -1,6 +1,6 @@
 // Challenge 1: Your Age in Days 
 
-const { resolve } = require("path");
+// const { resolve } = require("path");
 
 function ageInDays() {
     var birthYear = prompt('What year were you born in?');
@@ -63,7 +63,7 @@ function decideWinner(yourChoice, computerChoice) {
     var rpsDatabase = {
         'rock': {'scissor': 1, 'rock':0.5, 'paper': 0},
         'paper': {'rock': 1, 'paper':0.5, 'scissors': 0},
-        'scissors': {'paper': 1, 'paper':0.5, 'rock': 0},
+        'scissors': {'paper': 1, 'scissors':0.5, 'rock': 0},
     }
 
     var yourScore = rpsDatabase[yourChoice][computerChoice];
@@ -116,7 +116,7 @@ console.log(all_buttons);
 
 var copyAllButtons = [];
 for(let i = 0; i < all_buttons.length; i++) {
-    copyAllButtons.push(all_buttons[i].classList[1]);
+    copyAllButtons.push(all_buttons[i]);
 }
 
 function buttonColorChange(buttonThingy) {
